@@ -1,7 +1,84 @@
 :host {
-  background-color: #f8f9fa; /* Light background */
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Prevent overflow of content */
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Allow card to fill parent container */
+}
+
+.card-header {
+  background-color: #c48d5a;
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  flex-grow: 1; /* Allow the body to grow and take up available space */
+  overflow-y: auto; /* Only allow vertical scrolling if content overflows */
+  padding: 0px; /* Add padding for better spacing */
+  
+}
+
+.list-group {
+  margin: 0;
+  padding: 0;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white; /* Set background for the message items */
+  border-bottom: 1px solid #ddd;
+
+  /* Add hover effect */
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Image styling */
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* Spacing between image and text */
+  }
+
+  /* Message text */
+  strong {
+    margin-right: 5px; /* Space between sender name and message text */
+    font-size: 1rem;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-header {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .list-group-item {
+    padding: 8px;
+
+    .thumbnail {
+      width: 30px;
+      height: 30px;
+    }
+
+    strong {
+      font-size: 0.9rem;
+    }
+  }
 }

@@ -1,24 +1,69 @@
 :host {
-  display: block; /* Ensure the host element takes up space */
-  height: 100%; /* Allow the component to take full height */
-  padding: 10px; /* Inner padding */
-  background: #f8f9fa; /* Background color */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  overflow: hidden; /* Prevent scrolling for the entire component */
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-  .card {
-    height: 100%; /* Ensure the card takes full height */
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-  table {
-    width: 100%; /* Make the table take full width */
-    table-layout: fixed; /* Fix the table layout */
-    height: 100%; /* Ensure the table takes full height */
-    overflow: hidden; /* Prevent overflow from the table */
-  }
+.card-header {
+  background-color: #6b6b6b;
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
 
+.card-body {
+  flex-grow: 1; /* Allow card body to fill remaining space */
+  overflow: hidden; /* Prevent scrolling */
+  padding: 0; /* Remove padding */
+}
+
+.table {
+  width: 100%; /* Ensure table takes full width */
+  margin: 0; /* Remove any default margin */
+  border-collapse: collapse; /* Ensure borders are collapsed */
+  table-layout: fixed; /* Ensures the table maintains equal cell widths */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.875rem; /* Adjust font size */
+  vertical-align: middle; /* Center text vertically */
+}
+
+thead {
+  background-color: #f1f1f1; /* Light background for table header */
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9; /* Hover effect on rows */
+}
+
+@media (max-width: 768px) {
+  /* Responsive design: adjust padding and font size */
   th, td {
     height: 50px; /* Set a fixed height for table cells */
+  text-align: center; /* Center align text */
+  border: 1px solid #dee2e6; /* Border for table cells */
+  }
+  tbody tr td {
+    vertical-align: middle; /* Center align content vertically */
+  }
+  .card-header {
+    font-size: 1rem;
+    padding: 8px;
   }
 }

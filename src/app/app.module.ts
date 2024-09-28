@@ -12,6 +12,7 @@ import { MessageComponent } from './message/message.component';
 import { TodoComponent } from './todo/todo.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { RecentSalesComponent } from './recent-sales/recent-sales.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,13 @@ import { RecentSalesComponent } from './recent-sales/recent-sales.component';
     MessageComponent,
     TodoComponent,
     CalendarComponent,
-    RecentSalesComponent
+    RecentSalesComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

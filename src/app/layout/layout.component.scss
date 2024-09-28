@@ -12,8 +12,8 @@
       display: flex; /* Use flexbox for dashboard */
       flex-direction: column; /* Stack components vertically */
       padding: 10px; /* Padding for spacing */
-      overflow: hidden; /* Prevent overflow for the entire content */
-
+      overflow: hidden; /* Prevent scrolling on the whole dashboard */
+  
       app-recent-sales {
         margin-bottom: 10px; /* Margin below Recent Sales */
         flex: 0 0 auto; /* Fixed size for Recent Sales */
@@ -22,36 +22,40 @@
 
       .other-components {
         display: flex; /* Flexbox for other components */
-        flex: 1; /* Allow this area to grow and fill available space */
+        flex: 1; /* Ensure this fills the remaining space */
         justify-content: space-between; /* Space out components evenly */
         width: 100%; /* Ensure full width */
-
+        height: calc(100% - 250px); /* Adjust as needed based on the height of Recent Sales */
+       
         app-message,
         app-calendar,
-        app-todo-list {
+        app-todo {
           flex: 1; /* Each takes equal space */
-          margin: 2px; /* Small margin for spacing */
+          margin: 0px; /* Small margin for spacing */
           box-sizing: border-box; /* Include padding/border in element's total width/height */
           padding: 10px; /* Inner padding for each box */
           background: #f8f9fa; /* Light background for visibility */
           border-radius: 5px; /* Rounded corners */
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-          max-height: 200px; /* Set a maximum height for all */
-          overflow-y: auto; /* Allow scrolling only if content exceeds max height */
+          overflow: hidden; /* Allow scrolling only if content exceeds max height */
         }
 
         app-message {
           flex: 1; /* Each component takes equal space */
+          overflow: hidden; /* Ensure no scrolling */
+          height: 100%; /* Full height for the components section */
         }
 
         app-calendar {
           flex: 1; /* Each component takes equal space */
           overflow: hidden; /* No scrolling for Calendar */
+          height: 100%; /* Full height for the components section */
         }
 
-        app-todo-list {
+        app-todo {
           flex: 1; /* Each component takes equal space */
-          overflow-y: auto; /* Allow scrolling only for Todo List */
+          overflow: hidden; /* No scrolling only for Todo List */
+          height: 100%; /* Full height for the components section */
         }
       }
     }

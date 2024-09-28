@@ -1,10 +1,27 @@
 <div class="card h-100">
   <div class="card-header">
     <h5>To-Do List</h5>
+   
+
+  </div>
+
+  <div class="d-flex align-items-center">
+    <input
+    type="text"
+    placeholder="Search tasks..."
+    [(ngModel)]="searchTerm"
+    class="form-control me-2 "
+    (input)="filterTasks()"
+  />
+  <button (click)="filterTasks()" class="btn btn-sm">Search</button>
+  <button (click)="resetSearch()" class="btn btn-sm ms-2">Reset</button> <!-- Reset button -->
+
   </div>
   <div class="card-body p-0">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item" *ngFor="let task of tasks">{{ task }}</li>
+      <li class="list-group-item" *ngFor="let task of filteredTasks">
+        <input type="checkbox" class="form-check-input me-2" [(ngModel)]="task.completed">
+        <span [class.completed]="task.completed">{{ task.text }}</span></li>
     </ul>
   </div>
 </div>

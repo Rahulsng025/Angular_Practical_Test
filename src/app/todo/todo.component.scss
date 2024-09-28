@@ -1,0 +1,9 @@
+:host {
+  display: block; /* Ensure the host element takes up space */
+  max-height: 200px; /* Set a maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px; /* Inner padding */
+  background: #f8f9fa; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}

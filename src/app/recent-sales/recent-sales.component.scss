@@ -1,0 +1,9 @@
+.content {
+    font-size: 1rem;  // Default font size for desktop
+    line-height: 1.5;
+  
+    @media (max-width: 768px) {
+      font-size: 0.9rem;  // Slightly smaller font size on mobile
+    }
+  }
+  

@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+// Global Variables
+$primary-color: #007bff; // Button and thumbnail border color
+$header-bg: #f8f9fa; // Light gray background for headers
+$table-bg: #ffffff; // Background for the table and card body
+$card-border-color: #dee2e6; // Light border for cards
+
+// Global Settings for Layout
+html, body, .container-fluid {
+  height: 100%;
+  overflow: hidden; // Prevent scrolling globally
+}
+
+// Card Styling
+.card {
+  height: 100%;
+  border: 1px solid $card-border-color;
+  .card-header {
+    background-color: $header-bg;
+    border-bottom: 1px solid $card-border-color;
+    font-weight: bold;
+  }
+  .card-body {
+    background-color: $table-bg;
+    overflow-y: auto; // Allow scrolling inside card body if needed
+  }
+}
+
+// Button Styling
+.btn {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Table Styling
+.table {
+  table-layout: fixed;
+  th, td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+// Thumbnail Styling (for profile pictures in Messages)
+.thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid $primary-color;
+  object-fit: cover; // Make sure the image fits within the thumbnail
+}
+
+// Message List Styling
+.list-group-item {
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  img {
+    margin-right: 10px;
+  }
+}
+
+// Calendar Table Styling
+.table-bordered {
+  border: 1px solid $card-border-color;
+  td, th {
+    border: 1px solid $card-border-color;
+  }
+}
+
+// Responsive Fixes
+@media (max-width: 768px) {
+  .card-header {
+    text-align: center;
+  }
+  .list-group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .card-header {
+    padding: 0.5rem;
+    font-size: 1.2rem; // Smaller font size for mobile
+  }
+
+  .table {
+    font-size: 0.9rem; // Adjust the table font size for smaller screens
+  }
+
+  .list-group-item {
+    font-size: 0.9rem; // Adjust list font size for better readability
+  }
+
+  .btn {
+    width: 100%; // Make buttons full width on mobile
+  }
+
+  .thumbnail {
+    width: 30px;
+    height: 30px; // Slightly smaller thumbnails for mobile
+  }
+}

@@ -1,0 +1,13 @@
+<div class="card h-100">
+  <div class="card-header">
+    <h5>Messages</h5>
+  </div>
+  <div class="card-body p-0">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let message of messages">
+        <img src="../assets/thumbnail/pic2.jpg" alt="User Image" class="thumbnail">
+        <strong>{{ message.sender }}</strong>: {{ message.text }}
+      </li>
+    </ul>
+  </div>
+</div>

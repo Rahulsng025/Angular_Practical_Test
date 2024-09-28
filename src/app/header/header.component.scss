@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  justify-content: space-between;  // Space between left and right sections
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+
+  /* Left section styles */
+  .left-section {
+    font-size: 1.5rem;
+  }
+
+  /* Right section styles */
+  .right-section {
+    display: flex;
+    align-items: center;
+
+    /* Icon and text style for message and notification */
+    .icon-text {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;  // Space between the items
+      font-size: 1rem;
+
+      i {
+        margin-right: 5px;  // Space between icon and text
+        font-size: 1.3rem;
+      }
+    }
+
+    /* User thumbnail and name styles */
+    .user-profile {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      .thumbnail {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .username {
+        font-size: 1rem;
+      }
+    }
+
+    /* Sidebar toggle button */
+    .toggle-icon {
+      background: none;  // Remove default button styles
+      border: none;  // Remove border
+      color: white;  // Set color
+      font-size: 1.5rem;  // Size of the icon
+      cursor: pointer;  // Makes the icon clickable
+    }
+  }
+
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    flex-direction: column;  // Stack sections vertically on mobile
+    align-items: flex-start;
+
+    .right-section {
+      margin-top: 10px;
+      justify-content: space-between;
+      width: 100%;  // Make icons spread across the header
+
+      .icon-text, .user-profile, .toggle-icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}

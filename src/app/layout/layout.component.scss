@@ -1,0 +1,59 @@
+.layout {
+  display: flex; /* Arrange sidebar and main content side by side */
+  height: 100vh; /* Full height of the viewport */
+
+  .main-content {
+    flex-grow: 1; /* Take remaining space after sidebar */
+    display: flex;
+    flex-direction: column; /* Stack header, content, footer vertically */
+
+    .dashboard-content {
+      flex-grow: 1; /* Allow this area to grow */
+      display: flex; /* Use flexbox for dashboard */
+      flex-direction: column; /* Stack components vertically */
+      padding: 10px; /* Padding for spacing */
+      overflow: hidden; /* Prevent overflow for the entire content */
+
+      app-recent-sales {
+        margin-bottom: 10px; /* Margin below Recent Sales */
+        flex: 0 0 auto; /* Fixed size for Recent Sales */
+        max-height: 250px; /* Adjust height as needed */
+      }
+
+      .other-components {
+        display: flex; /* Flexbox for other components */
+        flex: 1; /* Allow this area to grow and fill available space */
+        justify-content: space-between; /* Space out components evenly */
+        width: 100%; /* Ensure full width */
+
+        app-message,
+        app-calendar,
+        app-todo-list {
+          flex: 1; /* Each takes equal space */
+          margin: 2px; /* Small margin for spacing */
+          box-sizing: border-box; /* Include padding/border in element's total width/height */
+          padding: 10px; /* Inner padding for each box */
+          background: #f8f9fa; /* Light background for visibility */
+          border-radius: 5px; /* Rounded corners */
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+          max-height: 200px; /* Set a maximum height for all */
+          overflow-y: auto; /* Allow scrolling only if content exceeds max height */
+        }
+
+        app-message {
+          flex: 1; /* Each component takes equal space */
+        }
+
+        app-calendar {
+          flex: 1; /* Each component takes equal space */
+          overflow: hidden; /* No scrolling for Calendar */
+        }
+
+        app-todo-list {
+          flex: 1; /* Each component takes equal space */
+          overflow-y: auto; /* Allow scrolling only for Todo List */
+        }
+      }
+    }
+  }
+}

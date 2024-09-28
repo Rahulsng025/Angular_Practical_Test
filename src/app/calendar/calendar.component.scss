@@ -1,0 +1,24 @@
+:host {
+  display: block; /* Ensure the host element takes up space */
+  height: 100%; /* Allow the component to take full height */
+  padding: 10px; /* Inner padding */
+  background: #f8f9fa; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  overflow: hidden; /* Prevent scrolling for the entire component */
+
+  .card {
+    height: 100%; /* Ensure the card takes full height */
+  }
+
+  table {
+    width: 100%; /* Make the table take full width */
+    table-layout: fixed; /* Fix the table layout */
+    height: 100%; /* Ensure the table takes full height */
+    overflow: hidden; /* Prevent overflow from the table */
+  }
+
+  th, td {
+    height: 50px; /* Set a fixed height for table cells */
+  }
+}

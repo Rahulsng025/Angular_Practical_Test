@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,10 +7,22 @@ import { Component} from '@angular/core';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-
   isCollapsed = false; // Variable to track the state of sidebar
+  @Output() componentChange = new EventEmitter<string>();
+
+
+  constructor(private router: Router){
+
+  }
 
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed; // Toggle the sidebar state
   }
+ 
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
+
+
 }

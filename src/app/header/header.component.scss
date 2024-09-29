@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;  // Space between left and right sections
   align-items: center;
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
+  background-color: white;
+  color: #4b4c4d;
+  padding: 15px;
 
   /* Left section styles */
   .left-section {
@@ -16,22 +16,23 @@
       .search-bar {
         display: flex;
         align-items: center;
-        background-color: #ffffff;
+        background-color: #4b4c4d;
         border-radius: 5px;
         overflow: hidden; // Prevent border-radius overflow
   
         input {
-          border: none; // Remove default border
+          border: 1px solid #4b4c4d; // Remove default border
           padding: 8px;
           font-size: 1rem;
           width: 200px; // Width of the search input
           outline: none; // Remove outline on focus
+          
         }
   
         .search-btn {
-          background-color: #007bff; // Match the header color
+          background-color: var(--sidebar-bg); // Match the header color
           border: none; // Remove default button styles
-          color: white; // Text color
+          color: #4b4c4d; // Text color
           padding: 8px 12px; // Padding for button
           cursor: pointer; // Makes the button clickable
           font-size: 1rem; // Font size for the button
@@ -71,26 +72,20 @@
       align-items: center;
       margin-right: 20px;
 
-      .thumbnail {
+      img {
         width: 40px;
-        height: 40px;
         border-radius: 50%;
         margin-right: 10px;
       }
 
+   
+
       .username {
-        font-size: 1rem;
+        font-weight: var(--font-weight-bold);
       }
     }
 
-    /* Sidebar toggle button */
-    .toggle-icon {
-      background: none;  // Remove default button styles
-      border: none;  // Remove border
-      color: white;  // Set color
-      font-size: 1.5rem;  // Size of the icon
-      cursor: pointer;  // Makes the icon clickable
-    }
+ 
   }
 
   /* Responsive behavior for smaller screens */

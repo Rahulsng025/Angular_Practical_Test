@@ -1,7 +1,7 @@
 <div class="side-nav" [ngClass]="{'collapsed': isCollapsed}">
   <!-- Collapse Button -->
   <button class="toggle-btn" (click)="toggleSidebar()">
-    <i [ngClass]="{'fa-arrow-right': isCollapsed, 'fa-arrow-left': !isCollapsed}" class="fas"></i>
+    <i [ngClass]="{'fa fa-align-left': isCollapsed, 'fa fa-align-right': !isCollapsed}" class="fas"></i>
   </button>
 
   <!-- User Thumbnail and Name (Show only if not collapsed) -->
@@ -13,37 +13,31 @@
   <!-- Navigation Menu -->
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" routerLink="/element">
         <i class="fa fa-desktop"></i>
         <span *ngIf="!isCollapsed">Elements</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" routerLink='/widget'>
         <i class="fa fa-th"></i>
         <span *ngIf="!isCollapsed">Widgets</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" routerLink='/form'>
         <i class="fa fa-bars"></i>
         <span *ngIf="!isCollapsed">Forms</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="fa fa-table"></i>
-        <span *ngIf="!isCollapsed">Tables</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" routerLink='/chart'>
         <i class="fa fa-file"></i>
         <span *ngIf="!isCollapsed">Charts</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" routerLink='/page'>
         <i class="fa fa-columns"></i>
         <span *ngIf="!isCollapsed">Pages</span>
       </a>

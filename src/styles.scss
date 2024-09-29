@@ -6,9 +6,16 @@ $table-bg: #ffffff; // Background for the table and card body
 $card-border-color: #dee2e6; // Light border for cards
 
 // Global Settings for Layout
-html, body, .container-fluid {
+html, .container-fluid {
   height: 100%;
   overflow: hidden; // Prevent scrolling globally
+}
+
+body {
+  font-family: 'Poppins', sans-serif;  /* Use Poppins or a similar font */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa;  /* Light grey background */
 }
 
 // Card Styling
@@ -24,6 +31,22 @@ html, body, .container-fluid {
     background-color: $table-bg;
     overflow-y: auto; // Allow scrolling inside card body if needed
   }
+}
+
+:root {
+  --primary-color: #3390FF; /* Same as the header and buttons */
+  --sidebar-bg: #2C3E50;    /* Dark sidebar */
+  --sidebar-active-bg: #1A252F;  /* Active sidebar menu */
+  --text-color: #FFFFFF; /* White text color for sidebar */
+  --header-bg: #3498DB; /* Same blue as header */
+  --content-bg: #ffffff; /* White background for content */
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 // Button Styling

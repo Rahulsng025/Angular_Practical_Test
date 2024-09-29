@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MessageComponent {
   messages = [
-    { sender: 'John Doe', text: 'Short message goes here...' },
-    { sender: 'Jane Doe', text: 'Another message...' },
-    { sender: 'Jane Doe', text: 'Short message goes here...' },
-    { sender: 'Jane Doe', text: 'Short message goes here...' }
+    { sender: 'Alex Dev', text: 'Short message goes here...' },
+    { sender: 'Mitchel Jhon', text: 'Another message...' },
+    { sender: 'Thomas Gab', text: 'Short message goes here...' },
+    { sender: 'Hannah Baker', text: 'Short message goes here...' }, 
+    { sender:  'Harry Potter', text: 'Hey!,I was trying you number'},
+    { sender: 'Sammy Jack', text: 'See you tomorrow!' }
   ]
 }

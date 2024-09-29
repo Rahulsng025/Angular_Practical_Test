@@ -1,9 +1,9 @@
 .side-nav {
-  background-color: #343a40;
+  background-color: var(--sidebar-bg);
+  color: var(--text-color);
   width: 250px;
   height: 100vh;
   padding: 20px;
-  color: #fff;
   transition: width 0.3s ease;
 
   &.collapsed {
@@ -13,12 +13,12 @@
   .toggle-btn {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 1.5rem;
+    //color: var(--sidebar-bg);
+    font-size: 1.1rem;
     position: absolute;
-    top: 20px;
-    right: -25px;
-    background-color: #007bff;
+    top: 18px;
+    right: 5px;//
+    //background-color: var(--sidebar-bg);
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;
@@ -53,20 +53,29 @@
 
     .nav-item {
       margin-bottom: 15px;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        background-color: var(--sidebar-active-bg);
+        border-radius: 8px;
+      }
 
       .nav-link {
         display: flex;
         align-items: center;
-        font-size: 1rem;
-        color: #adb5bd;
+        color: var(--text-color);
+        font-weight: var(--font-weight-normal);
 
         i {
-          font-size: 1.5rem;
-          margin-right: 10px;
+          margin-right: 15px;
+          font-size: 18px;
         }
 
         &:hover {
-          color: #fff;
+          color: var(--primary-color);
         }
 
         &.active {

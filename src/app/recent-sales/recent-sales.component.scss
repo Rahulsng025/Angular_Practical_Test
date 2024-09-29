@@ -1,15 +1,52 @@
+.recent-sales-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.card-header {
+  background-color:  var(--sidebar-bg); /* Blue header */
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+}
+
 .content {
-    font-size: 1rem;  // Default font size for desktop
-    line-height: 1.5;
+    font-size: 0.9rem;  // Default font size for desktop
+    line-height: 1.2;
   
     @media (max-width: 768px) {
-      font-size: 0.9rem;  // Slightly smaller font size on mobile
+      .card-header {
+        font-size: 0.9rem;
+        padding: 8px;
+      }
+      table th, table td {
+        padding: 8px;
+      }
     }
   }
   
   table {
     th, td {
       text-align: center; /* Center the text in table cells */
+      vertical-align: middle;
+      padding: 9px 7px;
+      font-size: 0.8rem;
+    }
+    th {
+      background-color: #f8f9fa;
+      font-weight: 600;
+    }
+    td {
+      background-color: white;
     }
   
     input[type="checkbox"] {

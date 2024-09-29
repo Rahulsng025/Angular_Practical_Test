@@ -1,26 +1,29 @@
 :host {
   background-color: #f8f9fa;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
   height: 100%;
 }
 
 .card-header {
-  background-color: #28a745; /* Green background for the header */
+  background-color: var(--sidebar-bg); /* Adjust color to match the image */
   color: white;
   padding: 10px;
   font-size: 1.2rem;
   text-align: center;
+  text-align: left;
   border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 
 
   input {
@@ -32,7 +35,7 @@
 .card-body {
   flex-grow: 1; /* Allow the body to grow and take up available space */
   overflow-y: auto; /* Allow scrolling in case the to-do list exceeds container height */
-  padding: 0px; /* Padding for spacing inside the card body */
+  padding: 0; /* Padding for spacing inside the card body */
 }
 
 .list-group {
@@ -41,25 +44,45 @@
 }
 
 .list-group-item {
+  display: flex;
+  align-items: center;
   padding: 10px;
   background-color: white; /* White background for each task */
   border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
   
   /* Hover effect */
   &:hover {
     background-color: #f1f1f1; /* Light background color on hover */
   }
 
-  /* Task text styling */
-  font-size: 1rem;
-  color: #333; /* Dark text color */
-}
+  /* Thumbnail styling */
+  .thumbnail {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 
-.completed {
-  text-decoration: line-through; /* Strikethrough for completed tasks */
-  color: gray; /* Change color to indicate it's completed */
-}
+    /* Message content */
+    .message-content {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    strong {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 2px;
+    }
+  
+    span {
+      font-size: 0.90rem;
+      color: #555;
+    }
 
+  }
 
 
 /* Responsive adjustments */

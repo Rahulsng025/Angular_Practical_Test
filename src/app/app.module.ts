@@ -13,6 +13,11 @@ import { TodoComponent } from './todo/todo.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { RecentSalesComponent } from './recent-sales/recent-sales.component';
 import { FormsModule } from '@angular/forms';
+import { ElementsComponent } from './Left-Menu/elements/elements.component';
+import { WidgetsComponent } from './Left-Menu/widgets/widgets.component';
+import { FormsComponent } from './Left-Menu/forms/forms.component';
+import { ChartsComponent } from './Left-Menu/charts/charts.component';
+import { PagesComponent } from './Left-Menu/pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,11 @@ import { FormsModule } from '@angular/forms';
     TodoComponent,
     CalendarComponent,
     RecentSalesComponent,
+    ElementsComponent,
+    WidgetsComponent,
+    FormsComponent,
+    ChartsComponent,
+    PagesComponent,
     
   ],
   imports: [

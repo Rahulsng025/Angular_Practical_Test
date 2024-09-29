@@ -2,31 +2,33 @@
   display: flex;
   flex-direction: column;
   background-color: #f8f9fa;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 100%;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Allow card to fill parent container */
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 100%;
 }
 
 .card-header {
-  background-color: #c48d5a;
+  background-color: var(--sidebar-bg); /* Adjust color to match the image */
   color: white;
   padding: 10px;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 .card-body {
   flex-grow: 1; /* Allow the body to grow and take up available space */
   overflow-y: auto; /* Only allow vertical scrolling if content overflows */
-  padding: 0px; /* Add padding for better spacing */
+  padding: 0; /* Add padding for better spacing */
   
 }
 
@@ -41,6 +43,7 @@
   padding: 10px;
   background-color: white; /* Set background for the message items */
   border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
 
   /* Add hover effect */
   &:hover {
@@ -55,10 +58,22 @@
     margin-right: 10px; /* Spacing between image and text */
   }
 
+   /* Message content */
+   .message-content {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* Message text */
   strong {
-    margin-right: 5px; /* Space between sender name and message text */
-    font-size: 1rem;
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  span {
+    font-size: 0.85rem;
+    color: #555;
   }
 }
 
@@ -79,6 +94,10 @@
 
     strong {
       font-size: 0.9rem;
+    }
+
+    span {
+      font-size: 0.6rem;
     }
   }
 }

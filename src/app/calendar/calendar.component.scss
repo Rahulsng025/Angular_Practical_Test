@@ -15,11 +15,11 @@
 }
 
 .card-header {
-  background-color: #6b6b6b;
+  background-color: var(--sidebar-bg);
   color: white;
   padding: 10px;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #ddd;
 }
 

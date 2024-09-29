@@ -15,19 +15,24 @@ export class TodoComponent {
     {text:'Complete Assignment by the end of the day!',completed: false}
   ];
 
-searchTerm: string = ''; // Add a search term variable
-filteredTasks = [...this.tasks]; // Initialize filtered tasks
+searchTerm: string = ''; 
+filteredTasks = [...this.tasks]; 
 
 filterTasks() {
-  // Filter tasks based on the search term
+ 
   this.filteredTasks = this.tasks.filter(task => 
     task.text.toLowerCase().includes(this.searchTerm.toLowerCase())
   );
 }
- // Call this method to reset the search and show all tasks
+ 
  resetSearch() {
   this.searchTerm = '';
-  this.filteredTasks = [...this.tasks]; // Reset to show all tasks
+  this.filteredTasks = [...this.tasks]; 
+}
+
+ // Method to toggle completion state
+ toggleCompletion(task: any) {
+  task.completed = !task.completed;
 }
 
 }

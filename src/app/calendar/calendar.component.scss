@@ -24,43 +24,43 @@
 }
 
 .card-body {
-  flex-grow: 1; /* Allow card body to fill remaining space */
-  overflow: hidden; /* Prevent scrolling */
-  padding: 0; /* Remove padding */
+  flex-grow: 1; 
+  overflow: hidden; 
+  padding: 0; 
 }
 
 .table {
-  width: 100%; /* Ensure table takes full width */
-  margin: 0; /* Remove any default margin */
-  border-collapse: collapse; /* Ensure borders are collapsed */
-  table-layout: fixed; /* Ensures the table maintains equal cell widths */
+  width: 100%; 
+  margin: 0; 
+  border-collapse: collapse;
+  table-layout: fixed; 
 }
 
 th, td {
   padding: 10px;
   border: 1px solid #ddd;
-  font-size: 0.875rem; /* Adjust font size */
-  vertical-align: middle; /* Center text vertically */
+  font-size: 0.875rem;
+  vertical-align: middle; // Center text vertical
 }
 
 thead {
-  background-color: #f1f1f1; /* Light background for table header */
+  background-color: #f1f1f1; 
   font-weight: bold;
 }
 
 tbody tr:hover {
-  background-color: #f9f9f9; /* Hover effect on rows */
+  background-color: #f9f9f9; //Hover effect on rows 
 }
 
 @media (max-width: 768px) {
-  /* Responsive design: adjust padding and font size */
+  /* Responsive design: padding and font size */
   th, td {
-    height: 50px; /* Set a fixed height for table cells */
-  text-align: center; /* Center align text */
-  border: 1px solid #dee2e6; /* Border for table cells */
+    height: 50px;
+  text-align: center;
+  border: 1px solid #dee2e6;
   }
   tbody tr td {
-    vertical-align: middle; /* Center align content vertically */
+    vertical-align: middle; 
   }
   .card-header {
     font-size: 1rem;

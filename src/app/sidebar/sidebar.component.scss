@@ -13,12 +13,12 @@
   .toggle-btn {
     background: none;
     border: none;
-    //color: var(--sidebar-bg);
+   
     font-size: 1.1rem;
     position: absolute;
     top: 18px;
-    right: 5px;//
-    //background-color: var(--sidebar-bg);
+    right: 5px;
+  
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;
@@ -109,7 +109,7 @@
     }
 
     &.collapsed {
-      display: none; // Hide the sidebar completely when collapsed on mobile
+      display: none; 
     }
   }
 }

@@ -15,7 +15,7 @@
 }
 
 .card-header {
-  background-color: var(--sidebar-bg); /* Adjust color to match the image */
+  background-color: var(--sidebar-bg); 
   color: white;
   padding: 10px;
   font-size: 1.2rem;
@@ -25,17 +25,16 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
 
-
   input {
-    width: 70%; // Adjust width as needed
-    margin-left: 10px; // Space between title and input
+    width: 70%; 
+    margin-left: 10px; 
   }
 }
 
 .card-body {
-  flex-grow: 1; /* Allow the body to grow and take up available space */
-  overflow-y: auto; /* Allow scrolling in case the to-do list exceeds container height */
-  padding: 0; /* Padding for spacing inside the card body */
+  flex-grow: 1; 
+  overflow-y: auto; 
+  padding: 0; 
 }
 
 .list-group {
@@ -47,16 +46,16 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: white; /* White background for each task */
+  background-color: white; 
   border-bottom: 1px solid #ddd;
   font-family: 'Roboto', sans-serif;
   
-  /* Hover effect */
+  // Hover effect
   &:hover {
-    background-color: #f1f1f1; /* Light background color on hover */
+    background-color: #f1f1f1;
   }
 
-  /* Thumbnail styling */
+  // Thumbnail styling 
   .thumbnail {
     width: 45px;
     height: 45px;
@@ -64,7 +63,7 @@
     margin-right: 10px;
   }
 
-    /* Message content */
+    // Message content
     .message-content {
       display: flex;
       flex-direction: column;
@@ -85,7 +84,30 @@
   }
 
 
-/* Responsive adjustments */
+  .custom-button {
+    background-color: rgb(204, 199, 199);
+    color: black;
+    border: 1px solid #ccc;
+    transition: background-color 0.3 ease, color 0.3s ease;
+    &:hover {
+      background-color: rgb(172, 170, 170);
+   
+    }
+  }
+
+  .custom-buttons {
+    background-color:  #55c2da;
+    color: black;
+    border: 1px solid #ccc;
+    transition: background-color 0.3 ease, color 0.3s ease;
+    &:hover {
+      background-color: rgb(172, 170, 170);
+   
+    }
+  }
+  
+
+// Responsive adjustments
 @media (max-width: 768px) {
   .card-header {
     font-size: 1rem;
@@ -96,4 +118,9 @@
     padding: 8px;
     font-size: 0.9rem;
   }
+}
+
+.completed {
+  text-decoration: line-through; 
+  color: gray; 
 }

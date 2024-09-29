@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
-// Define the Sale interface
+// Sale interface
 interface Sale {
   date: string;
   invoice: string;
   customer: string;
   amount: string;
   status: string;
-  selected?: boolean; // Optional property for checkbox selection
+  selected?: boolean; 
 }
 
 @Component({
@@ -43,8 +43,8 @@ export class RecentSalesComponent {
    // Method to add a new sale
    addSale() {
     if (this.newSale.date && this.newSale.invoice && this.newSale.customer && this.newSale.amount) {
-      this.salesData.unshift({ ...this.newSale }); // Add to the beginning of the array
-      this.resetForm(); // Clear the form after adding
+      this.salesData.unshift({ ...this.newSale }); 
+      this.resetForm(); //
     } else {
       alert('Please fill in all fields');
     }

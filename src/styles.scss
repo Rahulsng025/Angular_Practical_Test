@@ -29,17 +29,17 @@ body {
   }
   .card-body {
     background-color: $table-bg;
-    overflow-y: auto; // Allow scrolling inside card body if needed
+    overflow-y: auto; // Allow scrolling inside card body 
   }
 }
 
 :root {
-  --primary-color: #3390FF; /* Same as the header and buttons */
-  --sidebar-bg: #2C3E50;    /* Dark sidebar */
-  --sidebar-active-bg: #1A252F;  /* Active sidebar menu */
-  --text-color: #FFFFFF; /* White text color for sidebar */
-  --header-bg: #3498DB; /* Same blue as header */
-  --content-bg: #ffffff; /* White background for content */
+  --primary-color: #3390FF;
+  --sidebar-bg: #2C3E50;   
+  --sidebar-active-bg: #1A252F; 
+  --text-color: #FFFFFF; 
+  --header-bg: #3498DB; 
+  --content-bg: #ffffff;
   --font-weight-normal: 400;
   --font-weight-bold: 600;
 }
@@ -69,13 +69,13 @@ a {
   }
 }
 
-// Thumbnail Styling (for profile pictures in Messages)
+// Thumbnail Styling 
 .thumbnail {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: 2px solid $primary-color;
-  object-fit: cover; // Make sure the image fits within the thumbnail
+  object-fit: cover; // image fits within the thumbnail
 }
 
 // Message List Styling
@@ -113,15 +113,15 @@ a {
   }
 
   .table {
-    font-size: 0.9rem; // Adjust the table font size for smaller screens
+    font-size: 0.9rem; // table font size for smaller screens
   }
 
   .list-group-item {
-    font-size: 0.9rem; // Adjust list font size for better readability
+    font-size: 0.9rem; // font size for better readability
   }
 
   .btn {
-    width: 100%; // Make buttons full width on mobile
+    width: 100%; // buttons full width on mobile
   }
 
   .thumbnail {

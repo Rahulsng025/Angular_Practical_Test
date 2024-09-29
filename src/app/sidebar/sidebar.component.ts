@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-  isCollapsed = false; // Variable to track the state of sidebar
+  isCollapsed = false; 
   @Output() componentChange = new EventEmitter<string>();
 
 

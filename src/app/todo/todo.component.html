@@ -13,14 +13,19 @@
     class="form-control me-2 "
     (input)="filterTasks()"
   />
-  <button (click)="filterTasks()" class="btn btn-sm">Search</button>
-  <button (click)="resetSearch()" class="btn btn-sm ms-2">Reset</button> <!-- Reset button -->
+  <button (click)="filterTasks()" type="button" class="btn btn-sm custom-button" >Search</button>
+  <button (click)="resetSearch()" class="btn btn-sm ms-2 custom-buttons">Reset</button> 
 
   </div>
   <div class="card-body p-0">
     <ul class="list-group list-group-flush">
       <li class="list-group-item" *ngFor="let task of filteredTasks">
-        <input type="checkbox" class="form-check-input me-2" [(ngModel)]="task.completed">
+        <input type="checkbox"
+        [checked]="task.completed" 
+          (click)="toggleCompletion(task)" 
+          style="cursor: pointer;" 
+         class="form-check-input me-2" 
+         [(ngModel)]="task.completed">
         <span [class.completed]="task.completed">{{ task.text }}</span></li>
     </ul>
   </div>
